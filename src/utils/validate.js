@@ -1,4 +1,4 @@
-export const isNotNumber = (moneyInput) => Number.isNaN(moneyInput);
+export const isNotNumber = (moneyInput) => isNaN(moneyInput);
 
 export const isOverThreshold = (moneyInput, threshold) => moneyInput > threshold;
 

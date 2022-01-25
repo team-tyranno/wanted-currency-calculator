@@ -25,8 +25,8 @@ export function Calculator2() {
     const moneyInput = event.target.value.replace(/,/g, '');
 
     if (isNotNumber(moneyInput)) {
-      event.target.value = event.target.value.slice(0, -1);
-      setAmount(event.target.value);
+      event.target.value = '';
+      setAmount(0);
       return;
     }
 
