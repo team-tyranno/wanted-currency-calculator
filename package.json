@@ -29,9 +29,10 @@
     ],
     "rules": {
       "prettier/prettier": [
-        "error"
+        "warn"
       ],
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "object-curly-newline": "off"
     }
   },
   "browserslist": {
