@@ -82,15 +82,15 @@ currencylayer에서 제공하는 API를 사용해 만든 환율 계산기입니�
 
 - 환율 계산기 전환
 
-![change](https://user-images.githubusercontent.com/28294925/151030226-233346b2-78da-4b17-b445-e0e9bbd6ca58.gif)
+![change](https://user-images.githubusercontent.com/28294925/151042700-93c83989-bd94-42fd-a88c-d5a1ff2eedb8.gif)
 
 - 1번 환율계산기 
 
-![calc1](https://user-images.githubusercontent.com/28294925/151030277-2fed4730-8d3b-43bc-b6d7-f14c1439d69e.gif)
+![calc1](https://user-images.githubusercontent.com/28294925/151042703-b574e87f-0146-44de-ab14-1cfbb3b200a1.gif)
 
 - 2번 환율계산기
 
-![calc2](https://user-images.githubusercontent.com/28294925/151030288-b722408e-80e0-4f45-985f-60c2225a6dcc.gif)
+![calc2](https://user-images.githubusercontent.com/28294925/151042705-e08fd3d5-0f7b-4737-bbc8-1ca4339bab39.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
