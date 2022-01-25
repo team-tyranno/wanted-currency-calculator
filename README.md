@@ -90,7 +90,7 @@ currencylayer에서 제공하는 API를 사용해 만든 환율 계산기입니�
 
 - 2번 환율계산기
 
-![calc2](https://user-images.githubusercontent.com/28294925/151042705-e08fd3d5-0f7b-4737-bbc8-1ca4339bab39.gif)
+![calc2](https://user-images.githubusercontent.com/65898861/151075691-c07d468e-43f6-4396-9c59-45bf7aacaa3b.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
