@@ -1,7 +1,8 @@
 import request from './request';
 
-const checkDateIsOver = (currentDate, scheduleDate) =>
-  currentDate - scheduleDate / (60 * 60 * 1000) <= 24 ? false : true;
+function checkDateIsOver(currentDate, scheduleDate) {
+  return currentDate - scheduleDate / (60 * 60 * 1000) <= 24 ? false : true;
+}
 
 const setStorage = async (currentDate) => {
   const { get } = request;
@@ -12,26 +13,26 @@ const setStorage = async (currentDate) => {
 
   localStorage.setItem('date', currentDate.toDateString());
   localStorage.setItem('exchangeRate', JSON.stringify(data));
+
+  return data;
 };
 
-// 리펙토링 필요!
-export const getExchangeRate = () => {
-  const { quotes } = JSON.parse(localStorage.getItem('exchangeRate'));
-  return quotes;
+export const getExchangeRate = (name) => {
+  const response = JSON.parse(localStorage.getItem('exchangeRate'));
+
+  if (!response) {
+    return setStorage(new Date());
+  } else {
+    return response[name];
+  }
 };
 
-// 리팩토링 필요!
-export const getTargetExchangeRate = (country) => {
-  const { quotes } = JSON.parse(localStorage.getItem('exchangeRate'));
-  return quotes[`USD${country}`];
-};
-
-export const checkSchedule = async () => {
+export const checkSchedule = () => {
   const currentDate = new Date();
   const scheduleDate = localStorage.getItem('date');
   const exchangeRate = localStorage.getItem('exchangeRate');
 
-  if (scheduleDate && Object.keys(exchangeRate).length) {
+  if (scheduleDate && exchangeRate) {
     if (checkDateIsOver(currentDate, scheduleDate)) setStorage(currentDate);
   } else {
     setStorage(currentDate);

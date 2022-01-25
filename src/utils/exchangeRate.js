@@ -5,12 +5,12 @@ export const putComma = (amount) => {
 };
 
 export const calculateExchangeRate = ({ from, to }) => {
-  const exchangeRateData = getExchangeRate();
+  const exchangeRateData = getExchangeRate('quotes');
 
-  const fromCountryCode = 'USD' + from;
-  const toCountryCode = 'USD' + to;
+  const fromCountryCode = `USD${from}`;
+  const toCountryCode = `USD${to}`;
 
-  return exchangeRateData[fromCountryCode] / exchangeRateData[toCountryCode];
+  return exchangeRateData[toCountryCode] / exchangeRateData[fromCountryCode];
 };
 
 export const calculateExchangedAmount = ({ from, to, amount }) => {
