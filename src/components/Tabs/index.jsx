@@ -8,7 +8,6 @@ export function Tabs({ name, active, handleClickTab }) {
       active={active}
       onClick={() => {
         handleClickTab(name);
-        console.log(active);
       }}
     >
       {name}

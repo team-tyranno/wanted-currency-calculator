@@ -14,7 +14,7 @@ export const calculateExchangeRate = ({ from, to }) => {
 };
 
 export const calculateExchangedAmount = ({ from, to, amount }) => {
-  console.log(from, to, amount);
+  // console.log(from, to, amount);
   const exchangeRate = calculateExchangeRate({ from, to });
 
   const exchangedAmount = exchangeRate * amount;

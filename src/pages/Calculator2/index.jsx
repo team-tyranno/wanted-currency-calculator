@@ -8,9 +8,8 @@ export function Calculator2() {
   const currencyNames = ['USD', 'CAD', 'KRW', 'HKD', 'JPY', 'CNY'];
   const [fromCurrency, setFromCurrency] = useState('USD');
   const [toCurrency, setToCurrency] = useState('CAD');
-  console.log('toCurrency', toCurrency);
   const [amount, setAmount] = useState(0);
-  const [currencyList, setCurrencyList] = useState(
+  const [currencyList] = useState(
     currencyNames.map((currency, index) => ({
       id: index,
       title: currency,
@@ -23,7 +22,7 @@ export function Calculator2() {
   };
 
   const handleAmountInput = (event) => {
-    const moneyInput = event.target.value.replace(/\,/g, '');
+    const moneyInput = event.target.value.replace(/,/g, '');
 
     if (isNotNumber(moneyInput)) {
       event.target.value = event.target.value.slice(0, -1);

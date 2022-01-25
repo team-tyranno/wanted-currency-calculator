@@ -5,7 +5,6 @@ import { NavBar, MenuItem, Main } from './style';
 
 export function Layout({ children }) {
   const navigate = useNavigate();
-  // const [activeMenu, setActiveMenu] = useState(0); //idx
 
   return (
     <>
