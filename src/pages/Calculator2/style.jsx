@@ -6,6 +6,7 @@ export const Form = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  width: fit-content;
 `;
 
 export const ResultBox = styled.div`
@@ -24,4 +25,7 @@ export const TabList = styled.div`
 
 export const CurrencyInput = styled.div`
   display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
 `;

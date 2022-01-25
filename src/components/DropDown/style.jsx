@@ -10,8 +10,7 @@ export const UnfoldButton = styled.button`
   color: #333333;
   width: 50px;
   height: 25px;
-  padding: 15px 20px;
-  display: block;
+  text-align: center;
 `;
 
 export const MenuList = styled.div`
@@ -19,8 +18,6 @@ export const MenuList = styled.div`
   border-radius: 8px;
   position: absolute;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-20px);
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 `;
 
 export const DroppedMenu = styled.button`
@@ -28,6 +25,6 @@ export const DroppedMenu = styled.button`
   color: #333333;
   width: 50px;
   height: 25px;
-  padding: 15px 20px;
+  text-align: center;
   display: block;
 `;
