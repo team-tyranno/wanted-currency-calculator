@@ -1,2 +1,1 @@
-export { COLOR, LAYOUT, Z_INDEX } from './constantForA';
-export { ROUTE } from './constantForB';
+export { CALC1, CALC2 } from './constants';

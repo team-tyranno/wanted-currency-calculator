@@ -1,2 +1,3 @@
-export { SomeComponent1 } from './SomeComponent1';
-export { SomeComponent2 } from './someComponent2';
+export { DropDown } from './DropDown';
+export { ExchangeResultBox } from './ExchangeResultBox';
+export { Tabs } from './Tabs';

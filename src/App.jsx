@@ -1,18 +1,21 @@
-import React from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Layout, Calculator1, Calculator2 } from './pages';
+import { checkSchedule } from './utils/localStorage';
 
 function App() {
-  const navigate = useNavigate();
+  useEffect(() => {
+    checkSchedule();
+  }, []);
 
   return (
-    <>
-      <button onClick={() => navigate}>과제 1</button>
-      <button>과제 2</button>
+    <Layout>
       <Routes>
-        <Route />
-        <Route />
+        <Route path="/" element={<Calculator1 />} />
+        <Route path="/2" element={<Calculator2 />} />
       </Routes>
-    </>
+    </Layout>
   );
 }
+
 export default App;
