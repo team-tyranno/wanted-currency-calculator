@@ -17,6 +17,6 @@ export function Tabs({ name, active, handleClickTab }) {
 
 Tabs.propTypes = {
   name: PropTypes.string.isRequired,
-  active: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
   handleClickTab: PropTypes.func.isRequired,
 };

@@ -17,7 +17,7 @@
     <a href="https://currencylayer.com/">currencylayer</a>에서 제공하는 환율 정보를 이용한 환율 계산기입니다
     <br />
     <br />
-    <a href="https://hungry-meitner-18800a.netlify.app"><strong>배포 링크</strong></a>
+    <a href="http://tyranno-currency.s3-website.ap-northeast-2.amazonaws.com/"><strong>배포 링크</strong></a>
   </p>
 </div>
 
@@ -78,15 +78,19 @@
 <!-- 과제 소개 -->
 ## 과제 소개
 
-currencylayer에서 제공하는 API를 사용해 만든 환율 계산기입니다. 
+currencylayer에서 제공하는 API를 사용해 만든 환율 계산기입니다.
+
+- 환율 계산기 전환
+
+![change](https://user-images.githubusercontent.com/28294925/151042700-93c83989-bd94-42fd-a88c-d5a1ff2eedb8.gif)
 
 - 1번 환율계산기 
 
-![calc1]()
+![calc1](https://user-images.githubusercontent.com/28294925/151042703-b574e87f-0146-44de-ab14-1cfbb3b200a1.gif)
 
 - 2번 환율계산기
 
-![calc2]()
+![calc2](https://user-images.githubusercontent.com/65898861/151075691-c07d468e-43f6-4396-9c59-45bf7aacaa3b.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

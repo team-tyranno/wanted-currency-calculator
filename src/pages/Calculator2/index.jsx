@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { DropDown, ExchangeResultBox, Tabs } from '../../components';
-import { isOverThreshold, isNotNumber } from '../../utils';
-import { CALC2 } from '../../constants';
+import { isNotNumber } from '../../utils';
 import { Form, TabList, CurrencyInput, ResultBox } from './style';
 
 export function Calculator2() {
@@ -30,11 +29,7 @@ export function Calculator2() {
       return;
     }
 
-    if (isOverThreshold(moneyInput, CALC2.THRESHOLD - 1)) {
-      event.target.value = '1,000';
-      setAmount(1000);
-      return;
-    }
+    event.target.value = moneyInput.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     setAmount(moneyInput);
   };
 
