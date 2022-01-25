@@ -6,14 +6,14 @@ import { Information } from '../../components';
 
 export function Calculator1() {
   const [country, setCountry] = useState('KRW');
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState('');
   const [isValid, setIsValid] = useState(true);
   const [isShowen, setIsShowen] = useState(false);
 
   const onChange = (e) => {
     setIsShowen(false);
     setCountry(e.target.value);
-    setValue(0);
+    setValue('');
   };
 
   const onSubmit = (e) => {
@@ -25,7 +25,7 @@ export function Calculator1() {
       setIsValid(true);
     } else {
       setIsValid(false);
-      setValue(0);
+      setValue('');
     }
   };
 

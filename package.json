@@ -36,7 +36,8 @@
       "no-param-reassign": "off",
       "react/no-array-index-key": "off",
       "implicit-arrow-linebreak": "off",
-      "react/jsx-one-expression-per-line": "off"
+      "react/jsx-one-expression-per-line": "off",
+      "linebreak-style": "off"
     }
   },
   "browserslist": {
