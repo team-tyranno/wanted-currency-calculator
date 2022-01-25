@@ -17,7 +17,7 @@
     <a href="https://currencylayer.com/">currencylayer</a>에서 제공하는 환율 정보를 이용한 환율 계산기입니다
     <br />
     <br />
-    <a href="http://wantedfirstweekmission1.s3-website.ap-northeast-2.amazonaws.com/"><strong>배포 링크</strong></a>
+    <a href="http://tyranno-currency.s3-website.ap-northeast-2.amazonaws.com/"><strong>배포 링크</strong></a>
   </p>
 </div>
 
