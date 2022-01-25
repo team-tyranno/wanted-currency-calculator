@@ -125,6 +125,13 @@
   ```sh
   npm install npm@latest -g
   ```
+2. https://currencylayer.com/ 에 가입한 후 access key를 발급받아 root에 다음과 같이 .env파일을 추가한다.
+  ```
+  REACT_APP_API_END_POINT=http://api.currencylayer.com/live
+  REACT_APP_API_ACCESS_KEY=YOUR_ACCESS_KEY
+  ```
+
+
 
 ### Installation
 
