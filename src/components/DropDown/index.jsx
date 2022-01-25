@@ -16,13 +16,13 @@ export function DropDown({ title, list, getFromCurrency }) {
   return (
     <MenuContainer>
       <UnfoldButton type="button" onClick={() => setIsListOpen((state) => !state)}>
-        <div>{headerTitle}</div>
+        {headerTitle}
       </UnfoldButton>
       {isListOpen && (
         <MenuList role="list">
           {list.map((item) => (
             <DroppedMenu type="button" key={item.id} onClick={() => handleButtonClick(item.title)}>
-              <div>{item.title}</div>
+              {item.title}
             </DroppedMenu>
           ))}
         </MenuList>

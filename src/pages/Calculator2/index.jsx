@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { DropDown, ExchangeResultBox, Tabs } from '../../components';
-import { validateMoneyInput } from '../../utils';
+import { isOverThreshold, isNotNumber } from '../../utils';
 import { CALC2 } from '../../constants';
 import { Form, TabList, CurrencyInput, ResultBox } from './style';
 
 export function Calculator2() {
   const currencyNames = ['USD', 'CAD', 'KRW', 'HKD', 'JPY', 'CNY'];
-  const [fromCurrency, setFromCurrency] = useState('USD'); // 맨 위 dropdown으로 셀렉트되는 통화
+  const [fromCurrency, setFromCurrency] = useState('USD');
   const [toCurrency, setToCurrency] = useState('CAD');
   console.log('toCurrency', toCurrency);
   const [amount, setAmount] = useState(0);
@@ -23,18 +23,21 @@ export function Calculator2() {
   };
 
   const handleAmountInput = (event) => {
-    if (!validateMoneyInput({ moneyInput: event.target.value, threshold: CALC2.THRESHOLD })) return;
-    setAmount(event.target.value);
+    const moneyInput = event.target.value.replace(/\,/g, '');
+
+    if (isNotNumber(moneyInput)) {
+      event.target.value = event.target.value.slice(0, -1);
+      setAmount(event.target.value);
+      return;
+    }
+
+    if (isOverThreshold(moneyInput, CALC2.THRESHOLD - 1)) {
+      event.target.value = '1,000';
+      setAmount(1000);
+      return;
+    }
+    setAmount(moneyInput);
   };
-
-  // 숫자 입력창은 amount 조정.
-  // DropDown은 fromCurrency 조정.
-  // 탭 클릭은 toCUrrency 조정.
-
-  // fromCurrency에 따라 DropDown 변경(해결)
-  // fromCurrency에 따라 탭 이름 변경.
-
-  // toCurrency에 따라 탭 selected 상태 변경.
 
   const handleClickTab = (el) => {
     setToCurrency(el);

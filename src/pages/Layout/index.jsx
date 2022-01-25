@@ -1,25 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import propTypes from 'prop-types';
-import { NavBar } from './style';
+import { NavBar, MenuItem, Main } from './style';
 
-export const Layout = ({ children }) => {
+export function Layout({ children }) {
   const navigate = useNavigate();
+  // const [activeMenu, setActiveMenu] = useState(0); //idx
 
   return (
     <>
       <NavBar>
-        <button type="button" onClick={() => navigate('/')}>
-          Calculator1
-        </button>
-        <button type="button" onClick={() => navigate('/2')}>
-          Calculator2
-        </button>
+        <MenuItem onClick={() => navigate('/')}>Calculator1</MenuItem>
+        <MenuItem onClick={() => navigate('/2')}>Calculator2</MenuItem>
       </NavBar>
-      {children}
+      <Main>{children}</Main>
     </>
   );
-};
+}
 
 Layout.propTypes = {
   children: propTypes.node.isRequired,
