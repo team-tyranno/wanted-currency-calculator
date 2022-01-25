@@ -11,10 +11,10 @@
 <br />
 <div align="center">
 
-  <h3 align="center">README 제목</h3>
+  <h3 align="center">1주차 과제 - 와이어바알리/레드브릭</h3>
 
   <p align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">Best-README-Template</a>을 참고하여 만들어 본 README 템플릿입니다. 확인하시고 의견 주시면 감사하겠습니다!
+    <a href="https://currencylayer.com/">currencylayer</a>에서 제공하는 환율 정보를 이용한 환율 계산기입니다
     <br />
     <br />
     <a href="https://hungry-meitner-18800a.netlify.app"><strong>배포 링크</strong></a>
@@ -64,10 +64,10 @@
 <td align="center"><b>김재원</b></td>
 </tr>
 <tr>
-<td align="center"><b>FE Developer</b></td>
-<td align="center"><b>FE Developer</b></td>
-<td align="center"><b>FE Developer</b></td>
-<td align="center"><b>FE Developer</b></td>
+<td align="center"><b>2번 환율 계산기 개발</b></td>
+<td align="center"><b>2번 환율 계산기 개발</b></td>
+<td align="center"><b>1번 환율 계산기 개발</b></td>
+<td align="center"><b>1번 환율 계산기 개발</b></td>
 </tr>
 </table>
 
@@ -78,16 +78,15 @@
 <!-- 과제 소개 -->
 ## 과제 소개
 
-간략한 과제 소개 및 jpg, gif가 들어갈 영역입니다.
+currencylayer에서 제공하는 API를 사용해 만든 환율 계산기입니다. 
 
-- 과제 소개 1
+- 1번 환율계산기 
 
-![slider](https://user-images.githubusercontent.com/28294925/150082839-44f592e6-bdaa-4081-9281-12075b2c60d0.gif)
+![calc1]()
 
-- 과제 소개 2
+- 2번 환율계산기
 
-
-![responsive](https://user-images.githubusercontent.com/28294925/150082899-efbb1c3d-fd02-4134-8948-05d14bcb28de.gif)
+![calc2]()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -98,15 +97,21 @@
 <!-- 구현한 기능 -->
 ## 구현한 기능
 
-구현한 기능 목록을 작성할 영역입니다. 
-
-- [x] 기능 1
-- [x] 기능 2
-  - [x] 세부기능 2-1 
-  - [x] 세부기능 2-2
-- [x] 기능 3
-  - [x] 세부기능 3-1
-  - [x] 세부기능 3-2
+- [x] 상단 버튼을 클릭해 환율 계산기의 종류를 교체할 수 있다.
+- [x] 사이트에 접속할 시 localStorage를 확인해, localStorage에 환율 정보가 저장되어 있지 않거나 localStorage를 마지막으로 갱신한 시간으로부터 24시간 이상이 지났다면 API에 요청을 보내 환율 정보를 갱신하고 localStorage에 저장한다. 
+- [x] 1번 환율 계산기 구현
+  - [x] 한국(KRW), 일본(JPY), 필리핀(PHP) 중 하나의 수취국가를 select box로 선택할 수 있다.
+  - [x] 수취국가를 선택하면 해당 국가의 통화와 달러(USD) 사이의 환율이 표시된다.
+  - [x] 올바른 송금액(0~10000 사이의 숫자)을 입력하고 submit 버튼을 누르면 수취금액이 표시된다.
+  - [x] 수취금액은 소수점 아래 2번째 자리까지, 3자리마다 콤마를 찍은 형식으로 표기된다. 
+  - [x] 올바르지 않은 송금액을 입력하고 submit 버튼을 누르면 “송금액이 바르지 않습니다" 라는 에러 메시지가 하단에 표시된다.
+- [x] 2번 환율 계산기 구현
+  - [x] 1000 이상의 숫자가 입력될 경우 자동적으로 "1,000"으로 변경된다. 
+  - [x] 숫자 이외의 입력(알파벳, '-', '+' ...)은 처리되지 않는다.
+  - [x] 드롭다운 메뉴로 가지고 있는 통화의 종류를, 탭으로 바꿀 통화의 종류를 지정할 수 있다.
+  - [x] 드롭다운 메뉴에서 선택한 통화를 제외한 통화들만이 탭에 나타난다. 
+  - [x] 숫자 입력, 드롭다운 메뉴 클릭, 탭 클릭을 할 경우 변경될 통화의 종류와 환전 금액이 하단에 표기된다.
+  - [x] 환전 금액은 소수점 아래 2번째 자리까지, 3자리마다 콤마를 찍은 형식으로 표기된다.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -117,14 +122,19 @@
 <!-- 설치 및 실행 -->
 ## 설치 및 실행
 
-배포 링크가 동작하지 않을 시, local에서 프로젝트를 실행하는 방법을 작성할 영역입니다. 
-
 ### Prerequisites
 
 1. npm
   ```sh
   npm install npm@latest -g
   ```
+2. https://currencylayer.com/ 에 가입한 후 access key를 발급받아 root에 다음과 같이 .env파일을 추가한다.
+  ```
+  REACT_APP_API_END_POINT=http://api.currencylayer.com/live
+  REACT_APP_API_ACCESS_KEY=YOUR_ACCESS_KEY
+  ```
+
+
 
 ### Installation
 
@@ -147,32 +157,8 @@
 <hr>
 <br>
 
-<!-- 프로젝트 구조 -->
-## 프로젝트 구조
-
-프로젝트 구조를 작성할 영역입니다(Optional). 
-
-```bash
-├── public
-│   ├── index.html
-├── src
-│   ├── components
-│   ├── hooks
-│   ├── constants
-│   └── utils
-└── some_more_file.xxx
-``` 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<br>
-<hr>
-<br>
-
 <!-- LICENSE -->
 ## License
-
-라이센스를 표시할 영역입니다. 
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
