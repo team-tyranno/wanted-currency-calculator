@@ -52,16 +52,14 @@ export function Calculator2() {
         <TabList>
           {currencyNames
             .filter((name) => name !== fromCurrency)
-            .map((el, idx) => {
-              return (
-                <Tabs
-                  name={el}
-                  active={toCurrency === el}
-                  key={idx}
-                  handleClickTab={handleClickTab}
-                />
-              );
-            })}
+            .map((el, idx) => (
+              <Tabs
+                name={el}
+                active={toCurrency === el}
+                key={idx}
+                handleClickTab={handleClickTab}
+              />
+            ))}
         </TabList>
         <ExchangeResultBox from={fromCurrency} to={toCurrency} amount={amount} />
       </ResultBox>

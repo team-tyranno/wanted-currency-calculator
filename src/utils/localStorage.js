@@ -1,7 +1,7 @@
 import request from './request';
 
 function checkDateIsOver(currentDate, scheduleDate) {
-  return currentDate - scheduleDate / (60 * 60 * 1000) <= 24 ? false : true;
+  return !(currentDate - scheduleDate / (60 * 60 * 1000) <= 24);
 }
 
 const setStorage = async (currentDate) => {
@@ -22,9 +22,8 @@ export const getExchangeRate = (name) => {
 
   if (!response) {
     return setStorage(new Date());
-  } else {
-    return response[name];
   }
+  return response[name];
 };
 
 export const checkSchedule = () => {

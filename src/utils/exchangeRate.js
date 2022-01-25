@@ -1,8 +1,7 @@
 import { getExchangeRate } from './localStorage';
 
-export const putComma = (amount) => {
-  return amount.toLocaleString('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); // String with 2 digits
-};
+export const putComma = (amount) =>
+  amount.toLocaleString('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 export const calculateExchangeRate = ({ from, to }) => {
   const exchangeRateData = getExchangeRate('quotes');
@@ -14,7 +13,6 @@ export const calculateExchangeRate = ({ from, to }) => {
 };
 
 export const calculateExchangedAmount = ({ from, to, amount }) => {
-  // console.log(from, to, amount);
   const exchangeRate = calculateExchangeRate({ from, to });
 
   const exchangedAmount = exchangeRate * amount;
